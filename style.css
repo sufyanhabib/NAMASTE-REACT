@@ -1,0 +1,24 @@
+/* #heading{
+    color: blue;
+    text-align: center;
+}
+ */
+
+#parent{
+    width: 650px;
+    margin: 20px auto;
+    border: 2px solid goldenrod;
+}
+#child{
+    width: 450px;
+    margin: 10px auto;
+    border: 2px dotted orange;
+    text-align: center;
+}
+
+#child2{
+    width: 450px;
+    margin: 15px auto;
+    border: 2px dotted orange;
+    text-align: center;
+}

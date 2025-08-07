@@ -31,5 +31,29 @@ const element = (
   </div>
 );
 
+function Car(props) {
+  return <h2 style={props.style}>I am a  {props.brand.name} and Model is {props.brand.model} !</h2>;
+}
+
+function Garage() {
+  const carStyle = {
+    backgroundColor: "lightblue",
+    padding: "20px",
+    borderRadius: "5px",
+  };
+  const carInfo = {
+    name: "Ford",
+    model: "Mustang",
+  };
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car   style={carStyle} brand={carInfo} />
+      <Car brand="BMW" />
+      <Car brand="Fiat" />
+    </>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(element);
+root.render(<Garage />); // Rendering the Garage component to the root element

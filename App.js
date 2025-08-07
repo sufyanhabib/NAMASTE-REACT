@@ -32,7 +32,11 @@ const element = (
 );
 
 function Car(props) {
-  return <h2 style={props.style}>I am a  {props.brand.name} and Model is {props.brand.model} !</h2>;
+  return (
+    <h2 style={props.style}>
+      I am a {props.brand.name} and Model is {props.brand.model} !
+    </h2>
+  );
 }
 
 function Garage() {
@@ -48,9 +52,33 @@ function Garage() {
   return (
     <>
       <h1>Who lives in my garage?</h1>
-      <Car   style={carStyle} brand={carInfo} />
+      <Car style={carStyle} brand={carInfo} />
       <Car brand="BMW" />
       <Car brand="Fiat" />
+      <FootBall />
+    </>
+  );
+}
+
+function FootBall() {
+  const goal = () => {
+    alert("Great Shot");
+  };
+  const shoot = (a, b) => {
+    console.log(a);
+    alert(b.type);
+  };
+
+  return (
+    <>
+      <button onClick={goal}>Click Me</button>
+      <button
+        onClick={(e) => {
+          shoot("Goal", e);
+        }}
+      >
+        Take the Shot
+      </button>
     </>
   );
 }

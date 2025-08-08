@@ -1,87 +1,113 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-// Importing React and ReactDOM to render the component
-// React is used to create components and ReactDOM is used to render them to the DOM
 
-// Creating a React element (a component) to render
-// Here, we are creating a simple heading element
-// This is a JSX syntax which will be transpiled to JavaScript
-
-const heading = <h1>Hello, World from React</h1>;
-
-const list = (
-  <ul>
-    <li>Apple</li>
-    <li>Banana</li>
-    <li>Orange</li>
-    <li>Mango</li>
-  </ul>
-);
-
-const x = 20;
-let text = "Hello, World!";
-if (x < 10) {
-  text = "Hello, React!";
-}
-const element2 = <h1>{text}</h1>;
-const element = (
-  <div>
-    {heading} {list} {10 + 20} {/* This will render the sum of 10 and 20 */}
-    {element2}
-  </div>
-);
-
-function Car(props) {
+const Header = () => {
   return (
-    <h2 style={props.style}>
-      I am a {props.brand.name} and Model is {props.brand.model} !
-    </h2>
+    <div className="header">
+      <div className="logo">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx4F5whCbQR21YvzXI0jKqBz9Fc5UmHeIZG-b0bwaNHEEzlp3QrKBfrvg&s"
+          alt="logo"
+          style={{ width: "100px", height: "auto", borderRadius: "100%" }}
+        />
+      </div>
+      <div className="navbar">
+        <ul>
+          <li>Home</li>
+          <li>Menu</li>
+          <li>About Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
   );
-}
+};
 
-function Garage() {
-  const carStyle = {
-    backgroundColor: "lightblue",
-    padding: "20px",
-    borderRadius: "5px",
-  };
-  const carInfo = {
-    name: "Ford",
-    model: "Mustang",
-  };
+const Body = () => {
   return (
     <>
-      <h1>Who lives in my garage?</h1>
-      <Car style={carStyle} brand={carInfo} />
-      <Car brand="BMW" />
-      <Car brand="Fiat" />
-      <FootBall />
+      <div className="search-bar">
+        <input type="search" name="search" id="search" />
+      </div>
+      <div className="res-container">
+        <ResCard />
+      </div>
+      <Footer />
     </>
   );
-}
+};
 
-function FootBall() {
-  const goal = () => {
-    alert("Great Shot");
-  };
-  const shoot = (a, b) => {
-    console.log(a);
-    alert(b.type);
-  };
-
+const ResCard = () => {
   return (
-    <>
-      <button onClick={goal}>Click Me</button>
-      <button
-        onClick={(e) => {
-          shoot("Goal", e);
-        }}
-      >
-        Take the Shot
-      </button>
-    </>
+    <div className="res-card">
+      <div className="card">
+        <img
+          src="https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg"
+          alt=""
+          style={{ width: "100%", height: "200px", objectFit: "cover" }}
+        />
+        <h2>Restaurant Name</h2>
+        <p>Restaurant Description</p>
+        <p>Rating: 4.5</p>
+      </div>
+      <div className="card">
+        <img
+          src="https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg"
+          alt=""
+          style={{ width: "100%", height: "200px", objectFit: "cover" }}
+        />
+        <h2>Restaurant Name</h2>
+        <p>Restaurant Description</p>
+        <p>Rating: 4.5</p>
+      </div>
+      <div className="card">
+        <img
+          src="https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg"
+          alt=""
+          style={{ width: "100%", height: "200px", objectFit: "cover" }}
+        />
+        <h2>Restaurant Name</h2>
+        <p>Restaurant Description</p>
+        <p>Rating: 4.5</p>
+      </div>
+      <div className="card">
+        <img
+          src="https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg"
+          alt=""
+          style={{ width: "100%", height: "200px", objectFit: "cover" }}
+        />
+        <h2>Restaurant Name</h2>
+        <p>Restaurant Description</p>
+        <p>Rating: 4.5</p>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="footer">
+      <div className="footer-left ">
+        <p>Follow us on:</p>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+      </div>
+      <div className="footer-right">
+        <p>Contact us:</p>
+        <p>© 2025 Foodie. All rights reserved.</p>
+      </div>
+    </div>
+  );
+};
+function AppLayout() {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
   );
 }
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Garage />); // Rendering the Garage component to the root element
+root.render(<AppLayout />);

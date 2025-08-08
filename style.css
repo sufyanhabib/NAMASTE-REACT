@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    border: 1px solid blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar {
+    border: 1px solid orange;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+/* Body compoent */
+
+.search-bar {
+
+    text-align: center;
+    padding: 20px;
+
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 33%;
+    border-radius: 20px;
+    border: 2px solid cornflowerblue;
+}
+
+.res-container {
+    display: flex;
+    justify-content: center;
+}
+
+.res-card {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+/* footer component */
+.footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #f8f9fa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 40px;
+    font-size: 15px;
+    color: #333;
+    z-index: 100;
+}
+
+.footer .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.footer ul li:hover {
+    color: #0056b3;
+}

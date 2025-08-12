@@ -69,6 +69,19 @@ p {
     border: 2px solid cornflowerblue;
 }
 
+/* filter Buttom */
+.filter {
+    margin-top: 20px;
+}
+
+.filter .btn {
+    padding: 3px 8px 3px 8px;
+    border-radius: 10px;
+    background-color: #97bfeb;
+    color: #fffdfd;
+    font-size: 0.95rem;
+}
+
 .res-container {
     display: flex;
     justify-content: space-around;
@@ -141,9 +154,9 @@ p {
     height: 60px;
     width: 100%;
     background-color: #f8f9fa;
-    /* position: fixed;
+    position: fixed;
     bottom: 0;
-    left: 0;*/
+    left: 0;
     margin-top: 50px;
     padding: 0 40px;
     /* font-size: 15px;
